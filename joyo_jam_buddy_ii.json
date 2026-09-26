@@ -1,0 +1,138 @@
+{
+  "device_name": "Joyo Jam Buddy II",
+  "device_type": "便携吉他音箱 + 综合效果器",
+  "overview": "Joyo Jam Buddy II 是一款集吉他音箱、效果器、鼓机、Looper 于一体的便携设备，适合练习和小型演出。",
+  "channels": [
+    {
+      "name": "Clean",
+      "description": "清音通道，适合流行、放克、爵士等风格",
+      "typical_amp_models": ["65 Black Nor", "65 Black Vib"]
+    },
+    {
+      "name": "Rhythm",
+      "description": "节奏通道，适合布鲁斯、经典摇滚、流行摇滚",
+      "typical_amp_models": ["J800 Lo", "J800 Hi"]
+    },
+    {
+      "name": "Lead",
+      "description": "主音通道，适合硬摇滚、金属、独奏",
+      "typical_amp_models": ["DualRect Red", "5153 EL34", "5153 6L6"]
+    }
+  ],
+  "amp_models": [
+    { "name": "65 Black Nor", "style": "Clean", "description": "模拟 Fender Blackface Normal 通道，温暖的美式清音，中低频饱满" },
+    { "name": "65 Black Nor OD", "style": "OD", "description": "65 Black Nor 的过载版本，增添 breakup 颗粒感" },
+    { "name": "65 Black Vib", "style": "Clean", "description": "模拟 Fender Blackface Vibrato 通道，明亮的美式清音，高频通透" },
+    { "name": "65 Black Vib OD", "style": "OD", "description": "65 Black Vib 的过载版本，高频通透略带毛刺" },
+    { "name": "J800 Lo", "style": "Clean", "description": "模拟 Marshall JCM800 低增益档，经典英式清音" },
+    { "name": "J800 Lo OD", "style": "OD", "description": "J800 Lo 的过载版本，经典英式过载，颗粒感适中" },
+    { "name": "J800 Hi", "style": "Clean", "description": "模拟 Marshall JCM800 高增益档，英式 Crunch" },
+    { "name": "J800 Hi OD", "style": "OD", "description": "J800 Hi 的过载版本，英式高增益失真，中高频突出" },
+    { "name": "DualRect Red", "style": "Clean", "description": "模拟 Mesa Boogie Dual Rectifier Red 通道 Clean" },
+    { "name": "DualRect Red OD", "style": "OD", "description": "DualRect Red 的过载版本，美式高增益，低频厚重失真猛烈" },
+    { "name": "5153 EL34", "style": "Clean", "description": "模拟 EVH 5153 搭载 EL34 电子管 Clean 通道" },
+    { "name": "5153 EL34 OD", "style": "OD", "description": "5153 EL34 的过载版本，通透凌厉的高增益，适合独奏" },
+    { "name": "5153 6L6", "style": "Clean", "description": "模拟 EVH 5153 搭载 6L6 电子管 Clean 通道" },
+    { "name": "5153 6L6 OD", "style": "OD", "description": "5153 6L6 的过载版本，紧实饱满的高增益，适合金属" }
+  ],
+  "effects": {
+    "modulation": [
+      { "name": "Chorus", "description": "合唱效果，让音色更宽厚", "params": ["Rate", "Depth"] },
+      { "name": "Flanger", "description": "镶边效果，太空感", "params": ["Rate", "Depth"] },
+      { "name": "Phaser", "description": "移相效果，流动感", "params": ["Rate", "Depth"] },
+      { "name": "Tremolo", "description": "颤音效果，音量周期性变化", "params": ["Rate", "Depth"] },
+      { "name": "Vibrato", "description": "音高颤音", "params": ["Rate", "Depth"] }
+    ],
+    "delay": {
+      "description": "延迟效果，最大 500ms",
+      "params": ["Time(ms)", "Feedback", "Mix"]
+    },
+    "reverb": {
+      "description": "混响效果（DLY./D.TYPE 旋钮只有两种混响类型）",
+      "types": ["Hall", "Church"],
+      "params": ["Type", "Mix", "Decay"]
+    }
+  },
+  "knobs": [
+    { "name": "Gain", "description": "增益/失真度", "range": "0-100" },
+    { "name": "Bass", "description": "低音", "range": "-12 to +12 dB" },
+    { "name": "Mid", "description": "中音", "range": "-12 to +12 dB" },
+    { "name": "Treble", "description": "高音", "range": "-12 to +12 dB" },
+    { "name": "Master Volume", "description": "主音量", "range": "0-100" },
+    { "name": "Amp High", "description": "放大器独立高频EQ（AMPLIFIER 弹窗）", "range": "-12 to +12 dB" },
+    { "name": "Amp Mid", "description": "放大器独立中频EQ（AMPLIFIER 弹窗）", "range": "-12 to +12 dB" },
+    { "name": "Amp Low", "description": "放大器独立低频EQ（AMPLIFIER 弹窗）", "range": "-12 to +12 dB" }
+  ],
+  "amp_misc_params": {
+    "phase_in": { "description": "输入相位反转", "values": ["Nor", "Inv"], "default": "Nor" },
+    "phase_out": { "description": "输出相位反转", "values": ["Nor", "Inv"], "default": "Nor" },
+    "treb_fc": { "description": "高音截止频率", "range": "50-20000Hz", "default": 1900 },
+    "midd_fc": { "description": "中音截止频率", "range": "50-20000Hz", "default": 1000 },
+    "midd_q": { "description": "中音Q值（带宽）", "range": "0.1-10.0", "default": 0.7 },
+    "bass_fc": { "description": "低音截止频率", "range": "50-20000Hz", "default": 400 },
+    "hpf": { "description": "高通滤波器（切低频隆隆声）", "range": "0(OFF)或25-1000Hz", "default": 0 },
+    "lpf": { "description": "低通滤波器（切高频刺耳）", "range": "0(OFF)或1000-19000Hz", "default": 0 }
+  },
+  "tone_templates": {
+    "classic_rock": {
+      "channel": "Rhythm",
+      "amp_model": "Classic Rock",
+      "gain": 55,
+      "bass": 5,
+      "mid": 3,
+      "treble": 4,
+      "mod": { "type": "Chorus", "rate": 30, "depth": 20 },
+      "delay": { "time": 350, "feedback": 25, "mix": 15 },
+      "reverb": { "type": "Hall", "mix": 20, "decay": 30 },
+      "master": 70
+    },
+    "metal": {
+      "channel": "Lead",
+      "amp_model": "Metal",
+      "gain": 85,
+      "bass": 8,
+      "mid": 2,
+      "treble": 5,
+      "mod": null,
+      "delay": { "time": 250, "feedback": 20, "mix": 10 },
+      "reverb": { "type": "Hall", "mix": 15, "decay": 20 },
+      "master": 75
+    },
+    "blues": {
+      "channel": "Rhythm",
+      "amp_model": "Blues",
+      "gain": 40,
+      "bass": 4,
+      "mid": 5,
+      "treble": 3,
+      "mod": { "type": "Tremolo", "rate": 40, "depth": 25 },
+      "delay": { "time": 300, "feedback": 20, "mix": 10 },
+      "reverb": { "type": "Hall", "mix": 25, "decay": 40 },
+      "master": 65
+    },
+    "clean_pop": {
+      "channel": "Clean",
+      "amp_model": "Fender Clean",
+      "gain": 20,
+      "bass": 4,
+      "mid": 3,
+      "treble": 4,
+      "mod": { "type": "Chorus", "rate": 25, "depth": 30 },
+      "delay": null,
+      "reverb": { "type": "Hall", "mix": 15, "decay": 35 },
+      "master": 70
+    },
+    "solo_lead": {
+      "channel": "Lead",
+      "amp_model": "Lead 800",
+      "gain": 70,
+      "bass": 3,
+      "mid": 6,
+      "treble": 5,
+      "mod": null,
+      "delay": { "time": 400, "feedback": 35, "mix": 25 },
+      "reverb": { "type": "Hall", "mix": 30, "decay": 45 },
+      "master": 75
+    }
+  }
+}
